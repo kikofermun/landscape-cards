@@ -1,0 +1,43 @@
+html, body{
+    margin: 0px;
+    height: 100vh;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.cards .card{
+    width: 20px;
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 20px;
+    position: relative;
+    transition: width 0.5s linear;
+}
+
+.cards .card:hover{
+    border: 1px solid orange;
+}
+
+.cards .card.selected{
+    width: 800px;
+}
+
+.cards .card .text{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    padding: 20px;
+    background-color: rgba( 0, 0, 0, 0.5 );
+    color: white;
+    transition: opacity 0.5s linear;
+}
+
+.cards .card.selected .text{
+    opacity: 1;
+}
